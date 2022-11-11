@@ -16,7 +16,7 @@ html {
 body {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 1fr;
+
   grid-template-rows: auto auto 1fr auto;
   grid-template-areas:
     "header"
@@ -27,6 +27,12 @@ body {
 }
 
 /* HEADER */
+
+/* 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////MOBILE///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
 
 @media (min-width: 320px) {
   header {
@@ -61,540 +67,323 @@ body {
     color: white;
     font-weight: 500;
   }
-}
 
-@media (min-width: 768px) {
-  #logo {
-    height: 20vh;
+  /* FOOTER */
+
+  footer {
+    grid-area: footer;
+    color: white;
     background-color: #000000;
+    width: 100%;
   }
 
-  #logo__img {
-    position: relative;
-    height: 6em;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  footer a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
   }
 
-  .nav__bar li {
+  .termin {
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  footer h4 {
+    margin-bottom: 1rem;
+  }
+
+  .socialicon {
     display: inline-block;
-    line-height: 3em;
-    padding: 0;
   }
 
-  .nav__bar a {
+  .socialicon i {
+    width: 100px;
+    padding-bottom: 1rem;
+    font-size: 20px;
+  }
+
+  /* INDEX */
+
+  section {
+    grid-area: section;
+    align-self: center;
+  }
+
+  .item--1 {
+    background-image: url(../Media/item1.png);
+  }
+
+  .item--2 {
+    background-image: url(../Media/item2.jpg);
+  }
+
+  .item--3 {
+    background-image: url(../Media/item3.jpg);
+  }
+
+  .items__child {
+    margin: 2rem 1rem;
+    padding: 6rem 2rem;
+    border-radius: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 150%;
+    box-shadow: 0 0 20px rgb(133, 133, 133);
+  }
+
+  .items__child a {
+    text-decoration: none;
+    text-shadow: 0 0 5px black;
+    color: white;
+    font-weight: 700;
+    padding: 6rem;
+  }
+
+  /* SECTION 1 and 2 */
+
+  .container {
+    background-color: #f2f4f5;
+    margin: 1rem 30px;
+    padding: 1rem;
+    border-width: 4px;
+    border-style: solid;
+    border-image: linear-gradient(to right, #5c0a9e, #de0a4d) 1;
+  }
+
+  .container img {
+    width: 200px;
+  }
+
+  button {
+    width: 100%;
+    border: 0;
+    padding: 12px 10px;
+    outline: none;
+    color: white;
+    background: linear-gradient(to right, #5c0a9e, #de0a4d);
+    border-radius: 20px;
+  }
+
+  /* SECTION 3 */
+
+  .wp-container a {
     text-decoration: none;
     color: white;
-    font-weight: 500;
-    opacity: 60%;
-    transition: 300ms;
-    padding: 0 5rem;
   }
 
-  .nav__bar a:hover {
-    opacity: 100%;
-  }
-
-  .nav {
-    position: sticky;
-    top: 0;
-    background-color: #000000;
-    height: 3em;
+  .wp-link {
+    background-color: #075e54;
+    margin: 0 2rem;
+    padding: 2rem 0;
+    border-radius: 40px;
     text-align: center;
-    z-index: 10;
+    box-shadow: 0 0 20px rgb(109, 109, 109);
+  }
+
+  .wp-link i {
+    font-size: 4rem;
+  }
+
+  /* CONTACt */
+
+  fieldset {
+    margin: 2rem 3rem;
+    border: 2px solid #5c0a9e;
+    border-radius: 20px;
+    background: linear-gradient(to right, #da6e90, #8054a3);
+  }
+
+  .contact__item {
+    width: 80%;
+    margin: 0.5rem 2rem;
+    padding: 1.5rem 1rem;
+    border: 2px solid #de0a4d;
+    border-radius: 10px;
+  }
+
+  .contact__item textarea {
+    resize: none;
+  }
+
+  .contact__item::placeholder {
+    color: #24399c;
+    font-weight: 700;
+  }
+
+  .contact__name {
+    background-color: #e9eaff;
+  }
+
+  .contact__tel {
+    background-color: #dde1ff;
+  }
+
+  .contact__email {
+    background-color: #c7cdfd;
+  }
+
+  .contact__message {
+    background-color: #a4b1fc;
+  }
+
+  .subBtn {
+    width: 80%;
+    margin: 1rem 0;
+  }
+
+  /* TERMINOS */
+
+  .terms__title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 40px;
+  }
+
+  .terms {
+    padding: 1rem 3rem;
+    margin: 1rem 0;
+    text-align: justify;
+  }
+
+  .terms span {
+    text-align: center;
+    display: block;
+    margin: 1rem;
+    font-size: 25px;
+    font-weight: 500;
+  }
+
+  .gotop {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .gotop a {
+    background-color: #db0d4e;
+    color: white;
+    text-decoration: none;
+    border: 1px solid rgb(105, 5, 92);
+    border-radius: 20px;
+    padding: 0.5rem 2rem;
+    box-shadow: 0 0 10px rgb(131, 131, 131);
   }
 }
-
-/* FOOTER */
-
-footer {
-  grid-area: footer;
-  color: white;
-  background-color: #000000;
-  width: 100%;
-}
-
-footer a {
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-}
-
-.termin {
-  padding-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-footer h4 {
-  margin-bottom: 1rem;
-}
-
-.socialicon {
-  display: inline-block;
-}
-
-.socialicon i {
-  width: 100px;
-  padding-bottom: 1rem;
-  font-size: 20px;
-}
-
-/* INDEX */
-
-section {
-  grid-area: section;
-  align-self: center;
-}
-
-.item--1 {
-  background-image: url(../Media/item1.png);
-}
-
-.item--2 {
-  background-image: url(../Media/item2.jpg);
-}
-
-.item--3 {
-  background-image: url(../Media/item3.jpg);
-}
-
-.items__child {
-  margin: 2rem 3rem;
-  padding: 6rem 3rem;
-  border-radius: 50px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 150%;
-  box-shadow: 0 0 20px rgb(133, 133, 133);
-}
-
-.items__child a {
-  text-decoration: none;
-  text-shadow: 0 0 5px black;
-  color: white;
-  font-weight: 700;
-  padding: 6rem;
-}
-
-/* SECTION 1 and 2 */
-
-.container {
-  background-color: #f2f4f5;
-  margin: 1rem 30px;
-  padding: 1rem;
-  border-width: 4px;
-  border-style: solid;
-  border-image: linear-gradient(to right, #5c0a9e, #de0a4d) 1;
-}
-
-.container img {
-  width: 200px;
-}
-
-button {
-  width: 100%;
-  border: 0;
-  padding: 12px 10px;
-  outline: none;
-  color: white;
-  background: linear-gradient(to right, #5c0a9e, #de0a4d);
-  border-radius: 20px;
-}
-
-/* SECTION 3 */
-
-.wp-container a {
-  text-decoration: none;
-  color: white;
-}
-
-.wp-link {
-  background-color: #075e54;
-  margin: 0 2rem;
-  padding: 2rem 0;
-  border-radius: 40px;
-  text-align: center;
-  box-shadow: 0 0 20px rgb(109, 109, 109);
-}
-
-.wp-link i {
-  font-size: 4rem;
-}
-
-/* CONTACt */
-
-fieldset {
-  margin: 0 3rem;
-  border: 2px solid #5c0a9e;
-  border-radius: 20px;
-  background: linear-gradient(to right, #da6e90, #8054a3);
-}
-
-.contact__item {
-  width: 80%;
-  margin: 1rem 2rem;
-  padding: 1.5rem 1.2rem;
-  border: 2px solid #de0a4d;
-  border-radius: 10px;
-}
-
-.contact__item textarea {
-  resize: none;
-}
-
-.contact__item::placeholder {
-  color: #24399c;
-  font-weight: 700;
-}
-
-.contact__name {
-  background-color: #e9eaff;
-}
-
-.contact__tel {
-  background-color: #dde1ff;
-}
-
-.contact__email {
-  background-color: #c7cdfd;
-}
-
-.contact__message {
-  background-color: #a4b1fc;
-}
-
-.subBtn {
-  width: 80%;
-  margin: 1rem 0;
-}
-
-/* TERMINOS */
-
-.terms__title {
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 40px;
-}
-
-.terms {
-  padding: 1rem 3rem;
-  margin: 1rem 0;
-  text-align: justify;
-}
-
-.terms span {
-  text-align: center;
-  display: block;
-  margin: 1rem;
-  font-size: 25px;
-  font-weight: 500;
-}
-
-.gotop {
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-}
-
-.gotop a {
-  background-color: #db0d4e;
-  color: white;
-  text-decoration: none;
-  border: 1px solid rgb(105, 5, 92);
-  border-radius: 20px;
-  padding: 0.5rem 2rem;
-  box-shadow: 0 0 10px rgb(131, 131, 131);
-}
-
 /* 
- HEADER STYLE ---------------------------------------- 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////DESKTOP///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+@media (min-width: 1200px) {
+  header {
+    height: 7vh;
+    text-align: center;
+  }
 
-#logo {
-  height: 20vh;
-  background-color: #000000;
+  nav li {
+    margin: 0 5rem;
+    opacity: 0.7;
+    transition: 300ms;
+  }
+
+  nav li:hover {
+    opacity: 1;
+  }
+
+  nav a {
+    padding: 20px 150px;
+  }
+
+  /* FOOTER */
+
+  footer a {
+    opacity: 0.7;
+    transition: 300ms;
+  }
+
+  footer a:hover {
+    opacity: 1;
+  }
+
+  footer h4 {
+    margin-bottom: 1rem;
+  }
+
+  .socialicon i {
+    font-size: 30px;
+  }
+
+  /* INDEX */
+
+  .items__child {
+    display: inline-block;
+    margin: 0 3rem;
+    padding: 8rem 4rem;
+    transition: 700ms ease;
+  }
+
+  .items__child:hover {
+    background-size: 200%;
+  }
+
+  .items__child a {
+    padding: 8rem;
+  }
+
+  /* SECTION 1 and 2 */
+
+  .container {
+    display: inline-block;
+    transition: all 300ms ease;
+  }
+
+  .container:hover {
+    margin: 0 40px;
+    box-shadow: 0 0 20px #838383;
+  }
+
+  .container img {
+    width: 300px;
+  }
+
+  button {
+    width: 50%;
+    transition: 300ms ease;
+  }
+
+  button:hover {
+    cursor: pointer;
+    width: 100%;
+  }
+
+  /* SECTION 3 */
+
+  .wp-container {
+    margin: 0 45rem;
+    transition: 300ms ease;
+  }
+
+  .wp-container a {
+    transition: 300ms ease;
+  }
+
+  .wp-container:hover {
+    text-shadow: 0 0 20px #ffffff;
+  }
+
+  .wp-container:hover {
+    margin: 0 44rem;
+  }
+
+  /* CONTACt */
+
+  fieldset {
+    margin: 0 45rem;
+  }
+
+  .subBtn {
+    width: 50% !important;
+  }
+
+  .subBtn:hover {
+    width: 80% !important;
+  }
 }
-
-#logo__img {
-  position: relative;
-  height: 6em;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.nav__bar li {
-  display: inline-block;
-  line-height: 3em;
-  padding: 0;
-}
-
-.nav__bar a {
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-  opacity: 60%;
-  transition: 300ms;
-  padding: 0 5rem;
-}
-
-.nav__bar a:hover {
-  opacity: 100%;
-}
-
-.nav {
-  position: sticky;
-  top: 0;
-  background-color: #000000;
-  height: 3em;
-  text-align: center;
-  z-index: 10;
-}
- */
-/* section {
-  height: 100vh;
-}
-
-body {
-  background-color: #47204d;
-  font-family: "Montserrat", sans-serif;
-}
-
- FOOTER STYLE ----------------------------------------
-
-footer {
-  color: white;
-  background-color: #000000;
-  width: 100%;
-
-}
-
-footer a {
-  text-decoration: none;
-  color: rgb(177, 177, 177);
-  transition: 300ms;
-}
-
-.footdiv {
-  text-align: center;
-}
-
-.termin {
-  padding-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-footer h4 {
-  margin-bottom: 1.5rem;
-}
-
-.socialicon {
-  display: inline-block;
-}
-
-.socialicon i {
-  width: 100px;
-  padding-bottom: 1.5rem;
-  font-size: 25px;
-}
-
-footer a:hover {
-  color: white;
-}
-
-INDEX ------------------------------------------
-
-.items {
-  margin-top: 15vh;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%);
-  display: inline-block;
-}
-
-.item--1 {
-  background-image: url(../Media/item1.png);
-}
-
-.item--2 {
-  background-image: url(../Media/item2.jpg);
-}
-
-.item--3 {
-  background-image: url(../Media/item3.jpg);
-}
-
-.items__child {
-  display: inline-block;
-  margin: 0 2rem;
-  padding: 6rem 3rem;
-  background-color: white;
-  border-radius: 50px;
-  text-align: center;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 200%;
-  transition: 1000ms;
-}
-
-.items__child:hover {
-  background-size: 250%;
-}
-
-.items__child a {
-  text-decoration: none;
-  color: white;
-  font-weight: 700;
-  padding: 6rem;
-  transition: 500ms;
-}
-
-.items__child a:hover {
-  text-shadow: 0 0 10px #5f5f5f;
-  font-size: 1.2rem;
-}
-
-.items__child:hover {
-  box-shadow: 0 0 20px #6e6e6e;
-}
-
-SECTION 1 and 2 ------------------ 
-
-section {
-  margin-top: 5vh;
-  position: relative;
-  left: 50%;
-  transform: translate(-50%);
-  display: inline-block;
-}
-
-.container {
-  background-color: #f2f4f5;
-  margin: 0 30px;
-  padding: 1rem;
-  display: inline-block;
-  border-width: 4px;
-  border-style: solid;
-  border-image: linear-gradient(to right, #5c0a9e, #de0a4d) 1;
-
-  transition: 500ms;
-}
-
-.container img {
-  width: 300px;
-}
-
-.container:hover {
-  padding: 1rem 1.5rem;
-}
-
-button {
-  text-align: center;
-  width: 100px;
-  border: 0;
-  padding: 12px 10px;
-  outline: none;
-  color: white;
-  background: linear-gradient(to right, #5c0a9e, #de0a4d);
-  border-radius: 20px;
-  cursor: pointer;
-  transition: width 0.5s;
-  position: relative;
-  left: 50%;
-  transform: translate(-50%);
-  display: inline-block;
-}
-
-.btn {
-  padding: 1rem;
-}
-
-button:hover {
-  width: 100%;
-}
-
-SECTION 3 ----------------------------- 
-
-.wp-container {
-  height: 50vh;
-}
-
-.wp-container a {
-  text-decoration: none;
-  color: white;
-}
-
-.wp-link {
-  background-color: #075e54;
-  border-radius: 40px;
-  text-align: center;
-  display: inline-block;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 3em;
-  transition: 300ms;
-}
-
-.wp-link:hover {
-  text-shadow: 0 0 10px #ece5dd;
-  box-shadow: 0 0 30px #075e54;
-}
-
-.wp-link i {
-  font-size: 4rem;
-}
-
-TERMS --------------------------------------
-
-.terms {
-  color: white;
-  padding: 2rem;
-  margin: 2rem 0;
-}
-
-.terms__title {
-  padding: 0 2rem 2rem;
-}
-
-CONTACTO -------------------------------- 
-
-fieldset {
-  border: 2px solid #5c0a9e;
-  border-radius: 20px;
-  background: linear-gradient(to right, #de0a4d, #5c0a9e);
-}
-
-.contact__item {
-  width: 300px;
-  margin: 0.5rem 2rem;
-  padding: 1rem 1.2rem;
-  border: 2px solid #de0a4d;
-  border-radius: 10px;
-}
-
-.contact__item textarea {
-  resize: none;
-}
-
-.contact__item::placeholder {
-  color: #24399c;
-  font-weight: 700;
-}
-
-.contact__name {
-  background-color: #e9eaff;
-}
-
-.contact__tel {
-  background-color: #dde1ff;
-}
-
-.contact__email {
-  background-color: #c7cdfd;
-}
-
-.contact__message {
-  background-color: #a4b1fc;
-}
- */

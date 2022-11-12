@@ -16,7 +16,6 @@ html {
 body {
   min-height: 100vh;
   display: grid;
-
   grid-template-rows: auto auto 1fr auto;
   grid-template-areas:
     "header"
@@ -26,8 +25,6 @@ body {
   text-align: center;
 }
 
-/* HEADER */
-
 /* 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////MOBILE///////////////////////////////////////////////////////
@@ -35,6 +32,8 @@ body {
 */
 
 @media (min-width: 320px) {
+  /* HEADER */
+
   header {
     grid-area: header;
     display: flex;
@@ -274,8 +273,11 @@ body {
 */
 @media (min-width: 1200px) {
   header {
+    position: sticky;
+    top: 0;
     height: 7vh;
     text-align: center;
+    align-items: center;
   }
 
   nav li {

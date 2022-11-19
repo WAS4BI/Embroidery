@@ -122,11 +122,11 @@ body {
   .items__child {
     margin: 2rem 1rem;
     padding: 6rem 2rem;
-    border-radius: 50px;
+    border-radius: 40px;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 150%;
-    box-shadow: 0 0 20px rgb(133, 133, 133);
+    background-size: 120%;
+    box-shadow: 0 0 20px #05241a;
   }
 
   .items__child a {
@@ -145,7 +145,7 @@ body {
     padding: 1rem;
     border-width: 4px;
     border-style: solid;
-    border-image: linear-gradient(to right, #5c0a9e, #de0a4d) 1;
+    border-image: linear-gradient(to right, #0d4142, #10cfb6, #0d4142) 1;
   }
 
   .container img {
@@ -158,7 +158,7 @@ body {
     padding: 12px 10px;
     outline: none;
     color: white;
-    background: linear-gradient(to right, #5c0a9e, #de0a4d);
+    background: linear-gradient(to right, #22acb1, #10cfb6, #22acb1);
     border-radius: 20px;
   }
 
@@ -186,16 +186,16 @@ body {
 
   fieldset {
     margin: 2rem 3rem;
-    border: 2px solid #5c0a9e;
+    border: 2px solid #009c87;
     border-radius: 20px;
-    background: linear-gradient(to right, #da6e90, #8054a3);
+    background: linear-gradient(30deg, #0e4547, #0f302b, #0e4547);
   }
 
   .contact__item {
     width: 80%;
     margin: 0.5rem 2rem;
     padding: 1.5rem 1rem;
-    border: 2px solid #de0a4d;
+    border: 2px solid #009c87;
     border-radius: 10px;
   }
 
@@ -204,24 +204,24 @@ body {
   }
 
   .contact__item::placeholder {
-    color: #24399c;
+    color: #033d22;
     font-weight: 700;
   }
 
   .contact__name {
-    background-color: #e9eaff;
+    background-color: #c3e9e1;
   }
 
   .contact__tel {
-    background-color: #dde1ff;
+    background-color: rgb(170, 206, 197);
   }
 
   .contact__email {
-    background-color: #c7cdfd;
+    background-color: #98b4ae;
   }
 
   .contact__message {
-    background-color: #a4b1fc;
+    background-color: #809b94;
   }
 
   .subBtn {
@@ -278,6 +278,7 @@ body {
     height: 7vh;
     text-align: center;
     align-items: center;
+    z-index: 20;
   }
 
   nav li {
@@ -323,7 +324,8 @@ body {
   }
 
   .items__child:hover {
-    background-size: 200%;
+    background-size: 150%;
+    transform: scale(105%);
   }
 
   .items__child a {
@@ -332,14 +334,19 @@ body {
 
   /* SECTION 1 and 2 */
 
+  .father {
+    margin: 5rem 0;
+  }
+
   .container {
     display: inline-block;
     transition: all 300ms ease;
   }
 
   .container:hover {
-    margin: 0 40px;
-    box-shadow: 0 0 20px #838383;
+    transform: scale(102%);
+    box-shadow: 0 0 20px #083d2d;
+    z-index: -20;
   }
 
   .container img {
@@ -352,6 +359,7 @@ body {
   }
 
   button:hover {
+    border-radius: 10px;
     cursor: pointer;
     width: 100%;
   }
@@ -369,10 +377,7 @@ body {
 
   .wp-container:hover {
     text-shadow: 0 0 20px #ffffff;
-  }
-
-  .wp-container:hover {
-    margin: 0 44rem;
+    transform: scale(105%);
   }
 
   /* CONTACt */

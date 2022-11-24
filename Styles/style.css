@@ -57,12 +57,15 @@ body {
   /* HEADER */
 
   header {
-    grid-area: header;
+    display: grid;
     display: flex;
     height: 7vh;
     backdrop-filter: blur(10px) brightness(30%);
     align-items: center;
     text-align: right;
+    grid-template-columns: 10% 1fr;
+    grid-template-rows: 
+    "logo nav";
   }
 
   header #logo__img {
@@ -227,6 +230,8 @@ body {
     align-items: center;
   }
   .cotiza__div {
+    background: #009c87 ;
+    margin: 0 1rem;
     cursor: pointer;
     color: rgb(106, 223, 194);
     position: relative;
@@ -237,7 +242,7 @@ body {
     border: 6px solid rgb(17, 75, 0);
     display: block;
     padding: 3rem;
-    color: green;
+    color: white;
     text-decoration: none;
     font-size: 20px;
   }
@@ -245,49 +250,9 @@ body {
     font-size: 70px;
   }
 
-  .cotiza__div a:before {
-    content: "";
-    position: absolute;
-    top: -150%;
-    left: -150%;
-    background-color: #075e54;
-    width: 200%;
-    height: 200%;
-    border-radius: 0 0 100% 0;
-    transition: all 1s ease;
-    z-index: -2;
-    filter: blur(20px);
-  }
 
-  .cotiza__div a:after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 100%;
-    background-color: #002c26;
-    width: 250%;
-    height: 250%;
-    border-radius: 100% 0 120% 0;
-    transition: all 2s ease;
-    filter: blur(50px);
-    z-index: -1;
-  }
 
-  .cotiza__div a:hover {
-    color: white;
-    transition-delay: 300ms;
-  }
 
-  .cotiza__div a:hover:before {
-    top: 0;
-    left: 0;
-  }
-
-  .cotiza__div a:hover:after {
-    top: -700px;
-    left: -900px;
-    transition-delay: 300ms;
-  }
 
   /* CONTACt */
 
@@ -453,7 +418,7 @@ body {
   }
 
   nav .nav__bar--li {
-    margin: 0 5rem;
+    margin: 0;
     opacity: 0.7;
     transition: 300ms;
   }
@@ -550,18 +515,54 @@ body {
 
   /* SECTION 3 */
 
-  .wp-container {
-    margin: 0 37%;
-    transition: 300ms ease;
+  .cotiza__div{
+    background: none;
   }
 
-  .wp-container a {
-    transition: 300ms ease;
+  .cotiza__div a{
+    color: green;
   }
 
-  .wp-container:hover {
-    text-shadow: 0 0 20px #ffffff;
-    transform: scale(105%);
+  .cotiza__div a:hover {
+    color: white;
+    transition-delay: 300ms;
+  }
+
+  .cotiza__div a:before {
+    content: "";
+    position: absolute;
+    top: -150%;
+    left: -150%;
+    background-color: #075e54;
+    width: 200%;
+    height: 200%;
+    border-radius: 0 0 100% 0;
+    transition: all 1s ease;
+    z-index: -2;
+  }
+
+  .cotiza__div a:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    background-color: #002c26;
+    width: 250%;
+    height: 250%;
+    border-radius: 100% 0 120% 0;
+    transition: all 2s ease;
+    z-index: -1;
+  }
+
+  .cotiza__div a:hover:before {
+    top: 0;
+    left: 0;
+  }
+
+  .cotiza__div a:hover:after {
+    top: -700px;
+    left: -900px;
+    transition-delay: 300ms;
   }
 
   /* CONTACt */

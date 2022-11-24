@@ -568,7 +568,7 @@ body {
   /* CONTACt */
 
   fieldset {
-    margin: 0 35%;
+    margin: 25px 35%;
   }
 
   .subBtn {
@@ -577,6 +577,21 @@ body {
 
   .subBtn:hover {
     width: 80% !important;
+  }
+
+
+  .contact input::selection, .contact textarea::selection{
+    color: rgb(255, 255, 255);
+    background: rgb(37, 61, 37);
+  }
+
+  
+  .contact input:focus, .contact textarea:focus{
+    background: rgb(139, 213, 139);
+  }
+
+  .contact input:focus::placeholder{
+    color: white;   
   }
 
   /* TERMS */
@@ -630,6 +645,11 @@ body {
 
   .terms__sidebar a {
     color: white;
+  }
+
+  article::selection, span::selection{
+    color: black;
+    background: rgb(112, 173, 112);
   }
 
   /* TOP BUTTON */

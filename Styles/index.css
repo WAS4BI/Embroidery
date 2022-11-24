@@ -1,0 +1,113 @@
+/* 
+
+Realizado por: Juan Carlos Murillo Vivas
+
+ */
+/* 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////MOBILE///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+@media (min-width: 320px) {
+  /* INDEX */
+
+  section {
+    grid-area: section;
+    align-self: center;
+  }
+
+  .index__body {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: 0.5fr 0.5fr;
+    grid-template-areas:
+      "one"
+      "two";
+  }
+
+  .item--1 {
+    grid-area: one;
+    background-image: url(../Media/item1.png);
+  }
+
+  .item--2 {
+    grid-area: two;
+    background-image: url(../Media/item2.jpg);
+  }
+
+  /* .item--3 {
+    background-image: url(../Media/item3.jpg);
+  } */
+
+  .items__child {
+    display: flex;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 200%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .items__child a {
+    display: block;
+    padding: 15vh;
+    text-decoration: none;
+    text-shadow: 0 0 5px black;
+    color: white;
+    font-weight: 700;
+  }
+
+  /* SELECTION 1 */
+
+  .item--3 {
+    grid-area: one;
+    background-image: url(../Media/item4.jpg);
+  }
+
+  .item--4 {
+    grid-area: two;
+    background-image: url(../Media/item3.jpg);
+  }
+}
+/* 
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////DESKTOP///////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+  */
+@media (min-width: 1200px) {
+  /* INDEX */
+
+  .index__body {
+    min-width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "one two";
+  }
+
+  .items__child {
+    display: flex;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 200%;
+    justify-content: center;
+    align-items: center;
+    transition: 1000ms ease;
+  }
+
+  .items__child a {
+    font-size: 1.5rem;
+    padding: 35vh;
+    transition: 300ms ease;
+  }
+
+  .items__child a:hover {
+    transform: scale(110%);
+  }
+
+  .items__child:hover {
+    background-size: 250%;
+    /* filter: blur(10px); */
+  }
+}

@@ -9,8 +9,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#012915" />
-    <link rel="stylesheet" href="../Styles/style.css" />
+    <meta name="theme-color" content="#1c6758" />
+    <!-- STYLES -->
+    <link rel="stylesheet" href="../Styles/contact.css" />
+    <link rel="stylesheet" href="../Styles/universal.css" />
+    <!-- ----- -->
     <link rel="icon" href="../Media/light-mode.ico" />
     <link
       rel="stylesheet"
@@ -45,7 +48,7 @@
         <form action="" class="contact">
           <!-- Temporary <br> (Will change with CSS)  -->
           <br />
-          <input type="text" placeholder="Nombre" name="nombre" id="nombre" class="contact__name contact__item"/>
+          <input type="text" placeholder="Nombre" name="nombre" id="nombre" class="contact__name contact__item" pattern="[A-Za-z]+"/>
           <!-- Temporary <br> (Will change with CSS)  -->
           <br />
           <input
@@ -54,6 +57,8 @@
             id="telefono"
             placeholder="Teléfono"
             class="contact__tel contact__item"
+            min="1111111"
+            max="9999999999"
           />
           <!-- Temporary <br> (Will change with CSS)  -->
           <br />

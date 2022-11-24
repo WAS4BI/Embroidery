@@ -1,0 +1,174 @@
+/* 
+
+Realizado por: Juan Carlos Murillo Vivas
+
+ */
+:root {
+  --brand: #1c6758;
+  --branclear: #3d8361;
+  --branddark: #0f3a31;
+  --noki: #00ffab;
+  --nokidark: #14c38e;
+  --nokiclear: #b8f1b0;
+  --blue: #42e0d3;
+  --bluedark: #28867e;
+  --cofee: #d6cda4;
+  --light: #eef2e6;
+  --dark: #252525;
+  --good: #b3ffae;
+  --wrong: #ff7d7d;
+}
+/* BODY STYLES */
+
+/* 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////MOBILE///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+@media (min-width: 320px) {
+  /* TERMINOS */
+
+  .terms__section {
+    display: grid;
+    grid-template-rows: 160px 500px 1fr;
+    grid-template-areas:
+      "title"
+      "nav_terms"
+      "content";
+  }
+
+  .nav__terms {
+    grid-area: nav_terms;
+    background-color: rgb(236, 255, 236);
+  }
+
+  .title__main {
+    grid-area: title;
+    background-color: var(--branddark);
+  }
+
+  .content {
+    grid-area: content;
+  }
+
+  .terms__title {
+    display: flex;
+    font-weight: 500;
+    color: var(--light);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 40px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .terms__title--text {
+    align-self: center;
+  }
+
+  .terms {
+    padding: 1rem 3rem;
+    margin: 1rem 0;
+    text-align: justify;
+  }
+
+  .terms span {
+    text-align: center;
+    display: block;
+    padding-bottom: 1rem;
+    font-size: 25px;
+    font-weight: 500;
+  }
+
+  .terms__sidebar span {
+    display: block;
+    font-weight: 600;
+    padding-bottom: 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .terms__sidebar li {
+    list-style: decimal;
+    text-align: left;
+    padding-bottom: 1rem;
+    font-weight: 500;
+  }
+
+  .terms__sidebar {
+    padding-top: 2.1rem;
+  }
+
+  .terms__sidebar a {
+    display: block;
+    text-decoration: none;
+    color: var(--dark);
+    width: 100%;
+  }
+}
+/* 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////DESKTOP///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+@media (min-width: 1200px) {
+  /* TERMS */
+
+  .terms__section {
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    grid-template-rows: 100px 1fr;
+    grid-template-areas:
+      "nav_terms title"
+      "nav_terms content";
+  }
+
+  .nav__terms {
+    background-color: var(--branddark);
+    color: white;
+  }
+
+  .terms__sidebar {
+    position: sticky;
+    top: 7vh;
+  }
+
+  .terms__title {
+    background-color: var(--dark);
+    padding: 33px 0;
+  }
+
+  .terms__sidebar span {
+    text-align: left;
+  }
+
+  .terms__sidebar li {
+    opacity: 70%;
+    transition: all 300ms;
+  }
+
+  .terms__sidebar li:hover {
+    cursor: pointer;
+    opacity: 1;
+    transform: scale(102%);
+  }
+
+  .terms__sidebar {
+    padding-top: 2.1rem;
+  }
+
+  .terms span {
+    text-align: left;
+  }
+
+  .terms__sidebar a {
+    color: var(--light);
+  }
+
+  article::selection,
+  span::selection {
+    color: var(--dark);
+    background: var(--cofee);
+  }
+}

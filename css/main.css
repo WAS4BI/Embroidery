@@ -20,11 +20,6 @@ body {
   background-attachment: fixed;
 }
 @media (min-width: 320px) {
-  body {
-    /* HEADER */
-    /* FOOTER */
-    /* GO TO TOP BUTTON */
-  }
   body header {
     display: grid;
     display: flex;
@@ -108,11 +103,6 @@ body {
   }
 }
 @media (min-width: 1200px) {
-  body {
-    /* HEADER */
-    /* FOOTER */
-    /* TOP BUTTON */
-  }
   body header {
     backdrop-filter: blur(30px) brightness(30%);
     position: sticky;

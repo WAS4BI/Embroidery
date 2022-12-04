@@ -1,0 +1,20 @@
+{
+  "name": "proyecto-final",
+  "version": "1.0.0",
+  "description": "Realizado por: Juan Carlos Murillo Vivas",
+  "main": "index.js",
+  "scripts": {
+    "compile": "sass --watch scss:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WAS4BI/Embroidery.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WAS4BI/Embroidery/issues"
+  },
+  "homepage": "https://github.com/WAS4BI/Embroidery#readme"
+}

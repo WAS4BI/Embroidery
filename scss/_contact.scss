@@ -1,0 +1,99 @@
+/* 
+
+Realizado por: Juan Carlos Murillo Vivas
+
+ */
+/* 
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////MOBILE///////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+  */
+@media (min-width: 320px) {
+  /* CONTACt */
+
+  fieldset {
+    margin: 2rem 3rem;
+    border: 2px solid $nokidark;
+    border-radius: 20px;
+    background: linear-gradient(30deg, $brand, $branddark, $brand);
+
+    .contact__item {
+      width: 80%;
+      margin: 0.5rem 2rem;
+      padding: 1.5rem 1rem;
+      border: 2px solid $nokidark;
+      border-radius: 10px;
+
+      &::placeholder {
+        color: $branddark;
+        font-weight: 700;
+      }
+    }
+
+    .contact__name {
+      background-color: #bde6dd;
+    }
+
+    .contact__tel {
+      background-color: rgb(170, 206, 197);
+    }
+
+    .contact__email {
+      background-color: #98b4ae;
+    }
+
+    .contact__message {
+      background-color: #809b94;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    .subBtn {
+      width: 80%;
+      margin: 1rem 0;
+    }
+
+    .contact input:focus,
+    .contact textarea:focus {
+      background: $good;
+
+      &:focus::placeholder {
+        color: $dark;
+      }
+
+      &:invalid {
+        color: white;
+        background: $wrong;
+      }
+    }
+  }
+}
+/* 
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////DESKTOP///////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+    */
+@media (min-width: 1200px) {
+  /* CONTACt */
+
+  fieldset {
+    margin: 10vh 35%;
+
+    .subBtn {
+      width: 50% !important;
+      transition: 300ms ease;
+
+      &:hover {
+        width: 80% !important;
+      }
+    }
+
+    .contact input::selection,
+    .contact textarea::selection {
+      color: $light;
+      background: $brand;
+    }
+  }
+}

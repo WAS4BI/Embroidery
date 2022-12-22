@@ -20,20 +20,23 @@ body {
   background-attachment: fixed;
 }
 @media (min-width: 320px) {
+  body {
+    /* HEADER */
+    /* FOOTER */
+    /* GO TO TOP BUTTON */
+  }
   body header {
     display: grid;
-    display: flex;
-    height: 7vh;
+    height: 100%;
     backdrop-filter: blur(0) brightness(0);
-    align-items: center;
-    text-align: right;
-    grid-template-columns: 10% 1fr;
-    grid-template-rows: "logo nav";
+    place-items: center;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "logo" "navi";
   }
   body header #logo {
-    width: 100px;
-    align-self: left;
-    position: absolute;
+    grid-area: logo;
+    width: 200px;
+    margin: 20px 0 10px 0;
   }
   body header #logo a {
     display: block;
@@ -41,17 +44,18 @@ body {
     padding: 0 100px 0 40%;
   }
   body header #logo a #logo__img {
-    margin: 50%;
-    height: 3vh;
+    height: 5vh;
   }
   body header nav {
+    grid-area: navi;
     flex: 1;
   }
   body header nav ul {
     padding: 0;
   }
   body header nav ul .nav__bar--li {
-    margin: 0 1rem;
+    font-size: 0.8rem;
+    margin: 0 0.5rem 0.5rem 0;
     display: inline-block;
   }
   body header nav ul .nav__bar--li a {
@@ -103,7 +107,15 @@ body {
   }
 }
 @media (min-width: 1200px) {
+  body {
+    /* HEADER */
+    /* FOOTER */
+    /* TOP BUTTON */
+  }
   body header {
+    grid-template-rows: auto;
+    grid-template-columns: 10% 1fr;
+    grid-template-areas: "logo navi";
     backdrop-filter: blur(30px) brightness(30%);
     position: sticky;
     top: 0;
@@ -112,13 +124,20 @@ body {
     align-items: center;
     z-index: 20;
   }
+  body header #logo {
+    position: absolute;
+    width: 50px;
+  }
+  body header #logo a #logo__img {
+    height: 3vh;
+  }
   body header .nav__bar--li {
     margin: 0;
     opacity: 0.7;
     transition: 300ms;
   }
   body header .nav__bar--li a {
-    padding: 20px 150px;
+    padding: 20px 70px;
   }
   body header .nav__bar--li:hover {
     opacity: 1;
@@ -504,77 +523,6 @@ body {
   .terms__section span::selection {
     color: #252525;
     background: #d6cda4;
-  }
-}
-@media (min-width: 320px) {
-  .cotiza {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70vh;
-  }
-  .cotiza .cotiza__div {
-    background: #075e54;
-    margin: 0 1rem;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-  }
-  .cotiza .cotiza__div a {
-    border: 6px solid #075e54;
-    display: block;
-    padding: 3rem;
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-  }
-  .cotiza .cotiza__div a i {
-    font-size: 70px;
-  }
-}
-@media (min-width: 1200px) {
-  .cotiza .cotiza__div {
-    background: none;
-  }
-  .cotiza .cotiza__div a {
-    color: #075e54;
-  }
-  .cotiza .cotiza__div a:hover {
-    color: white;
-    transition-delay: 300ms;
-  }
-  .cotiza .cotiza__div a::before {
-    content: "";
-    position: absolute;
-    top: -150%;
-    left: -150%;
-    background-color: #075e54;
-    width: 200%;
-    height: 200%;
-    border-radius: 0 0 100% 0;
-    transition: all 1s ease;
-    z-index: -2;
-  }
-  .cotiza .cotiza__div a:hover::before {
-    top: 0;
-    left: 0;
-  }
-  .cotiza .cotiza__div a::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 100%;
-    background-color: #0f3a31;
-    width: 250%;
-    height: 250%;
-    border-radius: 100% 0 120% 0;
-    transition: all 2s ease;
-    z-index: -1;
-  }
-  .cotiza .cotiza__div a:hover:after {
-    top: -700px;
-    left: -900px;
-    transition-delay: 300ms;
   }
 }
 
